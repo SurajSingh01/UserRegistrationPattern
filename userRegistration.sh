@@ -43,8 +43,7 @@ fi
 
 echo "Enter Password"
 read password
-passwordPat="^[0-9a-zA-Z]{3,}$"
-if [[ ${#password} -ge 8 ]] && [[ $password =~ $passwordPat ]]
+if [[ ${#password} -ge 8 ]] && [[ $password == *[A-Z]* ]]
 then
       echo "Password is Valid"
 else
