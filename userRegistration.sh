@@ -18,5 +18,15 @@ if [[ $lastName =~ $lastnamePat ]]
 then
       echo "Last Name is Valid"
 else
-      echo "Last name is Invalid"
+      echo "Last name is invalid"
+fi
+
+echo "Enter Email Address :- "
+read email
+emailPattern="^[0-9a-zA-Z]+([.-+_][0-9a-zA-Z]+)*([@]{1})[a-zA-Z]+([.][a-zA-Z]{3})*([.][a-zA-Z]{2})*$"
+if [[ $email =~ $emailPattern ]]
+then
+      echo "Email isValid"
+else
+      echo "Email is Invalid"
 fi
