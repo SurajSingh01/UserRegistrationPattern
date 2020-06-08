@@ -30,3 +30,13 @@ then
 else
       echo "Email is Invalid"
 fi
+
+echo "Enter Mobile Number"
+read number
+numPattern="^[0-9]{2} {1}[6-9]{1}[0-9]{9}$"
+if [[ $number =~ $numPattern ]]
+then
+      echo "Mobile number is Valid"
+else
+      echo "Mobile number is Invalid"
+fi
