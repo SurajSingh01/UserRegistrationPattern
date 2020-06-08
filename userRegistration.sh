@@ -43,7 +43,7 @@ fi
 
 echo "Enter Password"
 read password
-if [[ ${#password} -ge 8 ]] && [[ $password == *[A-Z]* ]] && [[ $password == *[0-9]* ]] 
+if [[ ${#password} -ge 8 ]] && [[ $password == *[A-Z]* ]] && [[ $password == *[0-9]* ]]  && [[ $password == *[\@\#\%\^\*\$\.]* ]]
 then
       echo "Password is Valid"
 else
