@@ -10,3 +10,13 @@ then
 else
       echo "First Name is Invalid"
 fi
+
+echo "Enter last name :- "
+read lastName
+lastnamePat="^[A-Z]{1}[a-z]{2,}$"
+if [[ $lastName =~ $lastnamePat ]]
+then
+      echo "Last Name is Valid"
+else
+      echo "Last name is Invalid"
+fi
