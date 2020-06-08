@@ -13,7 +13,7 @@ fi
 
 echo "Enter last name :- "
 read lastName
-lastnamePat="^[A-Z]{1}[a-z]{2,}$"
+lastnamePat="^[A-Z]{1}[a-z]{1,}$"
 if [[ $lastName =~ $lastnamePat ]]
 then
       echo "Last Name is Valid"
@@ -39,4 +39,14 @@ then
       echo "Mobile number is Valid"
 else
       echo "Mobile number is Invalid"
+fi
+
+echo "Enter Password"
+read password
+passwordPat="^[0-9a-zA-Z]{3,}$"
+if [[ ${#password} -ge 8 ]] && [[ $password =~ $passwordPat ]]
+then
+      echo "Password is Valid"
+else
+      echo "Password is Invalid"
 fi
